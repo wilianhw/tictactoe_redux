@@ -1,8 +1,14 @@
 import React from 'react'
+import { Provider } from 'react-redux'
 import { TicTacToe } from './TicTacToe'
+import { store } from './store'
 
 function App() {
-  return <TicTacToe />
+  return (
+    <Provider store={store}>
+      <TicTacToe />
+    </Provider>
+  )
 }
 
 export default App
